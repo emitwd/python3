@@ -1,5 +1,6 @@
 # python3
-Cosas de python3 en español, Todo lo usado es python3 puro.
+
+Todo lo usado es python3 puro.
 
 - CLASES
 Para ejecutar el ejemplo de clases 
