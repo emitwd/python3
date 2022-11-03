@@ -6,8 +6,8 @@ Todo lo usado es python3 puro.
 Para ejecutar el ejemplo de clases 
 se usa el archivo viene en clases/main.py
 
-- EJERCICIOS
+- PRACTICAS
 Los ejercicios son archivos que funcionan
 por si mismos y estan documentados para explicar 
-la funcion ./ejercicios/
+la funcion ./practicas/
 
