@@ -20,7 +20,7 @@ def inversa2(texto):
     invertida = ''
     longitud = -len(texto)
     
-    for (letra) in range(longitud, 1):
+    for (letra) in range(longitud, 0):
         letra = abs(letra)
         invertida += texto[letra - 1]
         

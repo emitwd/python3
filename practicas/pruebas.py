@@ -1,3 +1,5 @@
-num = -10
+from random import randrange
+lista=[10, 10, 1]
 
-print(abs(num))
+print(randrange(0, 2))
+

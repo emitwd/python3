@@ -18,3 +18,5 @@ for i in range(0, 13):
     window.speed(1)
 
 window.screen.mainloop()
+
+#ME DIO FLOJERA

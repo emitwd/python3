@@ -5,11 +5,11 @@
 """
 
 def max(num1: int, num2: int):
+    
     numeros = [num1, num2]
-    if numeros[0] > numeros[1]:
-        return numeros[0]
-    else:
-        return numeros[1]
+    
+    if numeros[0] > numeros[1]: return numeros[0]
+    else: return numeros[1]
 
 print('Max de dos numeros');
 print(max(30, 20));
