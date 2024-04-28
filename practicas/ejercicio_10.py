@@ -1,48 +1,29 @@
-"""
-JUEGO DE PIEDRA, 
-PAPEL Y TIJERA
-"""
-from colorama import Fore, Back
-from random import randrange
-from os import system
+from colorama import Fore, Back  # Importa los estilos de color para la consola
+from random import randrange  # Importa una función para generar números aleatorios
+from os import system  # Importa la función para limpiar la pantalla
 
-system('cls')
+system('cls')  # Limpia la pantalla de la consola
 
-while True:
+# Imprime el encabezado del juego con un fondo de color magenta claro
+print(Back.LIGHTMAGENTA_EX + "JUEGO EN PYTHON" + Back.RESET)
 
-    print(
-        Back.LIGHTMAGENTA_EX+"JUEGO EN PYTHON"+Back.RESET
-    )
+# Define las opciones del juego con colores para el texto
+opciones = [f'\n{Fore.CYAN}Piedra - 0\n', f'{Fore.YELLOW}Papel - 1\n', f'{Fore.MAGENTA}Tijera - 2\n']
 
-    opciones = [
-        
-        f'\n{Fore.CYAN}Piedra - 0 \n', 
-            f'{Fore.YELLOW}Papel - 1 \n', 
-                f'{Fore.MAGENTA}Tijera - 2\n'
-                
-        ]
-    
-    jugador = int(input(opciones[0] + opciones[1] + opciones[2] + Fore.RESET +'\n\n\n DIGITA UN NUMERO: '))
-    system('cls')
-    maquina = randrange(0, 3)
-    
-    """
-    0 PIEDRA
-    1 PAPEL
-    2 TIJERA
-    """
-    ganaste = Back.GREEN+'GANASTE'+Back.RESET
-    perdiste = Back.RED+'PERDISTE'+Back.RESET
-    empate = Back.YELLOW+'EMPATE'+Back.RESET
-    print('MAQUINA: '+opciones[maquina])
-    
-    if jugador == 0 and maquina == 1: print(perdiste);
-    elif jugador == 0 and maquina == 2: print(ganaste);
-    elif jugador == 1 and maquina == 0: print(ganaste);
-    elif jugador == 1 and maquina == 2: print(perdiste);
-    elif jugador == 2 and maquina == 0: print(perdiste);
-    elif jugador == 2 and maquina == 1: print(ganaste);
-    elif jugador == maquina: print(empate);
+# Solicita al jugador que elija una opción e imprime las opciones disponibles
+jugador = int(input(opciones[0] + opciones[1] + opciones[2] + Fore.RESET + '\n\n\n DIGITA UN NUMERO: '))
+system('cls')  # Limpia la pantalla de la consola
 
-    break
-    
+maquina = randrange(3)  # Genera un número aleatorio para la elección de la máquina
+
+# Define los resultados del juego con diferentes colores de fondo
+resultados = ['EMPATE', 'PERDISTE', 'GANASTE']
+
+# Imprime la elección de la máquina
+print('MAQUINA: ' + opciones[maquina])
+
+# Determina el resultado del juego y lo imprime con el color de fondo correspondiente
+if (jugador - maquina) % 3 == 0:
+    print(Back.YELLOW + resultados[0] + Back.RESET)  # Empate
+else:
+    print(Back.RED + resultados[(maquina - jugador) % 3] + Back.RESET)  # Gana o pierde según el resultado
